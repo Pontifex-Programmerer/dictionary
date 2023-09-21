@@ -28,10 +28,11 @@ a {
     display: flex;
     justify-content: space-around;
 }
-.definition-wrapper {
+.content-wrapper {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     justify-content: space-between;
 }
 h1 {
@@ -64,13 +65,14 @@ a {
 .welcome {
     margin: 4em;
 }
-.word-wrapper {
+.definition-section {
     /* background-color: var(--decorative-fg-color2); */
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     padding: 2em;
-    width: 50%;
+    width: clamp(40ch, 100%, 75ch);
+    background-color: blue;
 }
 
 
@@ -98,5 +100,6 @@ a {
 }
 
 .definition {
+    width: 100%;
     letter-spacing: 1.5px;
 }
