@@ -42,11 +42,11 @@ body {
 .definition-section > h1 {
     color: var(--secondary-fg-color);
     font-family: 'Nova Round', cursive;
-    font-size: 3vh;
+    font-size: 3rem;
 }
 
 .definition-section > p {
-    font-size: 2vh;
+    font-size: 2rem;
 }
 
 .definition-section > a {
@@ -78,7 +78,7 @@ body {
 }
 
 .frontpage > h1 {
-    font-size: 3vh;
+    font-size: 2rem;
     text-align: center;
 }
 
@@ -91,7 +91,6 @@ body {
 .frontpage > .wordlist {
     display: flex;
     flex-wrap: wrap;
-    font-size: 2vh;
     margin: 0 auto;
 }
 
@@ -99,16 +98,28 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
     height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
+/* Adjust fonts for mobile */
+@media only screen and (max-width: 750px) { 
+    .wordlist-section {
+        font-size: 4rem;
+    }
+    .definition-section > h1 {
+        font-size: 5rem;
+    }
+    
+    .definition-section > p {
+        font-size: 4rem;
+    }
+}
 .wordlist-section > ul > li > a {
     color: var(--secondary-fg-color);
     text-decoration: none;
-    font-size: 2rem;
 }
 
 
