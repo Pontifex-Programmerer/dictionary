@@ -2,10 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Marck+Script&family=Maven+Pro&family=Nova+Round&display=swap');
 
 /*
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Marck Script', cursive;
-    font-family: 'Maven Pro', sans-serif;
-    font-family: 'Nova Round', cursive;
+font-family: 'Kanit', sans-serif;
+font-family: 'Marck Script', cursive;
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Nova Round', cursive;
 */
 * {
     --decorative-bg-color: #5252E7;
@@ -13,13 +13,10 @@
     --decorative-fg-color2:#0A0A3B;
     --secondary-fg-color: #1919B8;
     --secondary-bg-color: #FFFFFF;
+    margin: 0;
+    padding: 0;
 }
-body {
-    background-color: var(--secondary-bg-color);
-    color: var(--decorative-fg-color2);
-    font-family: 'Maven Pro', sans-serif;
-}
-
+/* Elements that are common to all pages */
 .content-wrapper {
     display: flex;
     flex-direction: column;
@@ -27,92 +24,96 @@ body {
     justify-content: space-between;
 }
 
-.content-wrapper > * {
-    padding: 1em;
-}
-
-.definition-section {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5vh;
-    margin: 0 auto;
-    max-width: 65ch;
-}
-
-.definition-section > h1 {
-    color: var(--secondary-fg-color);
-    font-family: 'Nova Round', cursive;
-    font-size: 3vh;
-}
-
-.definition-section > p {
-    font-size: 2vh;
-}
-
-.definition-section > a {
-    text-align: end;
-}
-
 .footer,
 .navbar {
     background-color: var(--decorative-fg-color1);
     display: flex;
     justify-content: space-between;
-    font-size: 2vh;
+    padding: 0.5em 2em;
 }
 
 .navbar > * > a, 
 .footer > * {
     color: var(--decorative-fg-color2);
     text-decoration: none;
+    font-size: 1.5rem;
 }
 
-.navbar > h2 {
-    margin: 0;
+body {
+    background-color: var(--secondary-bg-color);
+    color: var(--decorative-fg-color2);
+    font-family: 'Maven Pro', sans-serif;
 }
 
-.frontpage {
+/*Elements for the word definition pages */ 
+.definition-section {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-    width: 100ch;
-    max-width: 100%;
+    padding: 2em;
+    max-width: 65ch;
 }
 
+.definition-section > h1 {
+    color: var(--secondary-fg-color);
+    font-family: 'Nova Round', cursive;
+    font-size: 3rem;
+    border-bottom: dotted 1px var(--decorative-bg-color);
+}
+
+.definition-section > p {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.definition-section > a {
+    text-align: end;
+}
+
+
+/* Elements on the front page onlyy*/
 .frontpage > h1 {
-    font-size: 3vh;
+    font-size: 2rem;
     text-align: center;
+    margin: 2em;
+}
+
+.wordlist {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    width: clamp(20ch, 100%, 60rem);
+    margin: 0 auto;
 }
 
 .wordlist > * {
-    margin: 0 auto;
     text-align: center;
-    width: clamp(300px, 20ch, 100%);
+    margin: 1em auto;
+    padding: 0;
+    min-width: 20ch;
+    width: 45%;
+    max-width: 400px;
 }
 
-.frontpage > .wordlist {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 2vh;
-    margin: 0 auto;
+.wordlist-child > img {
+    margin: 0;
+    width: 100%;
 }
 
-.wordlist-section > ul {
+.wordlist-child > ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
-    padding: 0;
+    padding: 0 2em;
     margin: 0;
+    line-height: 2em;
     height: 100%;
 }
 
-.wordlist-section > ul > li > a {
+.wordlist-child > ul > li > a {
     color: var(--secondary-fg-color);
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-
-.wordlist-section > img {
-    margin: 2ch 0;
-    width: 100%;
-}
